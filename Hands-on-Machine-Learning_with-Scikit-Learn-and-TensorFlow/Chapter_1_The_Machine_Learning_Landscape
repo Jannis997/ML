@@ -1,0 +1,51 @@
+1. How would you define Machine Learning?
+2. Can you name four types of problems where it shines?
+3. What is a labeled training set?
+4. What are the two most common supervised tasks?
+5. Can you name four common unsupervised tasks?
+6. What type of Machine Learning algorithm would you use to allow a robot to
+walk in various unknown terrains?
+7. What type of algorithm would you use to segment your customers into multiple
+groups?
+8. Would you frame the problem of spam detection as a supervised learning prob‐
+lem or an unsupervised learning problem?
+9. What is an online learning system?
+10. What is out-of-core learning?
+11. What type of learning algorithm relies on a similarity measure to make predic‐
+tions?
+12. What is the difference between a model parameter and a learning algorithm’s
+hyperparameter?
+13. What do model-based learning algorithms search for? What is the most common
+strategy they use to succeed? How do they make predictions?
+14. Can you name four of the main challenges in Machine Learning?
+15. If your model performs great on the training data but generalizes poorly to new
+instances, what is happening? Can you name three possible solutions?
+16. What is a test set and why would you want to use it?
+
+Solutions: 
+1. The process of training an algorithm to improve at a task by providing data
+2. For problems were there is no algorithmic solution
+   Automation
+   Finding relations between data
+   Finding appropriate estimations fast
+3. Data that contains the information that a model is supposed to learn to predict
+4. regression (prediction of a continuous value) classification (prediction of a class)
+5. clustering, assocition rule learning, visualization, dimensionality reduction
+6. A reinforcement learning algorithm, since the robot interacts with his environment.
+7. If the groups are not defined: Unsupervised training (Clustering)
+8. Supervised learning because the two classes spam and not spam are defined and it is probably not difficult getting labeled data
+9. The model learns from online sources, where new data is frequently added.
+10. Only a small part of the data is in the computers memory for learning, the rest is stored somewhere else
+    The data on the computer changes until all data was processed.
+    This way a computer can handle huge amounts of data, that it woulndt be able to otherwise.
+11. Instant based methods
+12. model parameter are part of the model and are used to predict the output. Hyperparameter are used to create these model parameter.
+13. They create a model that can predict the outcome. For example linear regression creats a function to predict the output
+    They only need the model for the predictions and not the instances that the model was defined by. 
+14. overfitting, underfitting, faulty/poor data, useless data/features
+15. overfitting, Solutions: 
+    Reducing the Complexity of the model (Regularization, simpler model, decreasing polynumial, network complexity)
+    More trainingsdata
+    Reducing Data noise
+    fewer features(feature selection, dimensiality reduction methods)
+16. test set is a set that the final performance of the model can be measured with. It should not be used before the final model was created.
