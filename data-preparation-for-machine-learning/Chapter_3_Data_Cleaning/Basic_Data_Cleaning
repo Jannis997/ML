@@ -1,0 +1,22 @@
+# Check whether a column has only one value
+print(df.nunique())
+  
+# Delete columns with only one value
+# get number of unique values for each column
+counts = df.nunique()
+# record columns to delete
+to_del = [i for i,v in enumerate(counts) if v == 1]
+print(to_del)
+# drop useless columns
+df.drop(to_del, axis=1, inplace=True)
+
+# Check for duplucate rows
+# calculate duplicates
+dups = df.duplicated()
+# report if there are any duplicates
+print(dups.any())
+# list all duplicate rows
+print(df[dups])
+
+# delete duplicate rows
+df.drop_duplicates(inplace=True)
