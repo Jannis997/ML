@@ -34,25 +34,26 @@ sion classifier?
 1. Batch GD, Stochastic GD, Mini-batch GD
 2. All from 1. would suffer because the shape function would be have the forma of 
   an ellipse(in 2D) and not a circle, this would lead to the GD not going straight
-  to the minimum but go in a curve
+  to the minimum but go in a curve. You can mormalize the features
 3. No
 4. No, Stochastic GD and Mini-batchGD will never settle at the minimum except you
   gradually decrease the learning rate
 5. The model overfitted the data and surpassed its optimal point
 6. No, for Mini-batch GD, the validation error is not continuos, it could be that the 
   model only had a set back but will reach a lower validation error
-7. The fastest is dependend on n and m. Normal Equation and Batch GD will converge. 
+7. The fastest is dependend on n and m ( But Stochastic GD in general). Normal Equation and Batch GD will converge. 
   For the other two the learning rate has to gradually decrease to converge
 8. The model overfitted, hence the error for the trainings data is small but big for 
   the validation data. Three ways to solve the issue:
   • use lower polynomial
   • use regularization method
   • use early stopping
-9. High bias, Decrease it so the complexity of the model increases
+9. High bias, Decrease it so the complexity of the model increases (its underfitted)
 10. 
   • A bit regularization is almost always helpful so ridge regression over linear
   • If you suspect that many features are not useful
-  • Elastic Net if the number of features are higher than number of instances
+  • Elastic Net if the number of features are higher than number of instances, 
+  but also in general elastic
 11. two logistic regression since softmax regression can only select 1 and cant
   handle problems where 2 solutions are possible
 12. 
