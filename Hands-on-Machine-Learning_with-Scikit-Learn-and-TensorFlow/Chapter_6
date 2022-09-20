@@ -11,28 +11,18 @@ instances, roughly how much time will it take to train another Decision Tree on 
 training set containing 10 million instances?
 6. If your training set contains 100,000 instances, will setting presort=True speed
 up training?
-7. Train and fine-tune a Decision Tree for the moons dataset.
-a. Generate a moons dataset using make_moons(n_samples=10000, noise=0.4).
-b. Split it into a training set and a test set using train_test_split().
-c. Use grid search with cross-validation (with the help of the GridSearchCV
-class) to find good hyperparameter values for a DecisionTreeClassifier.
-Hint: try various values for max_leaf_nodes.
-d. Train it on the full training set using these hyperparameters, and measure
-your model’s performance on the test set. You should get roughly 85% to 87%
-accuracy.
-8. Grow a forest.
-a. Continuing the previous exercise, generate 1,000 subsets of the training set,
-each containing 100 instances selected randomly. Hint: you can use ScikitLearn’s ShuffleSplit class for this.
-b. Train one Decision Tree on each subset, using the best hyperparameter values
-found above. Evaluate these 1,000 Decision Trees on the test set. Since they
-were trained on smaller sets, these Decision Trees will likely perform worse
-than the first Decision Tree, achieving only about 80% accuracy.
-c. Now comes the magic. For each test set instance, generate the predictions of
-the 1,000 Decision Trees, and keep only the most frequent prediction (you can
-use SciPy’s mode() function for this). This gives you majority-vote predictions
-over the test set.
-d. Evaluate these predictions on the test set: you should obtain a slightly higher
-accuracy than your first model (about 0.5 to 1.5% higher). Congratulations,
-you have trained a Random Forest classifier!
 
-1. 
+
+1. log2(m)
+2. Generally lower but not always
+3. Yes, since it applies regularization
+4. Scaling has no effect on the decision tree so no
+5. Complexity for training: O(n × m log(m))
+  For the factor the instances m has to be multiplied by 10 and the whole has to be devided
+  by the original complexity:
+  K = (n × 10m × log(10m)) / (n × m × log(m)) = 10 × log(10m) / log(m)
+  for m=1,000,000 the result is 11.7 times training time of 1 hour
+6. Presorting speeds up training if there are only a few thousand instances, for 100,000 instances
+  the trainings time would increase
+
+
