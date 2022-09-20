@@ -8,4 +8,12 @@ on a training set with millions of instances and hundreds of features?
 6. Say you trained an SVM classifier with an RBF kernel. It seems to underfit the
 training set: should you increase or decrease γ (gamma)? What about C?
 
-1. 
+1. Fitting a street in the data where the middle line splits the classes. A certain number
+  of instances can lie on the street. The width of the street is maximized
+2. support vectors are the instances on the street, they influence the street. 
+  Other instances outside the street do not influence the model at all.
+3. Otherwise small features have less influence on the street than huge ones.
+4. No probability but the distance between the border line and the instance can 
+  be used as a confidence score
+5. primal, dual is sensitive to the number in instances regarding the computation complexity
+6. Increase gamma and C to increase the model complexity
