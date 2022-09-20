@@ -1,0 +1,11 @@
+1. What is the fundamental idea behind Support Vector Machines?
+2. What is a support vector?
+3. Why is it important to scale the inputs when using SVMs?
+4. Can an SVM classifier output a confidence score when it classifies an instance?
+What about a probability?
+5. Should you use the primal or the dual form of the SVM problem to train a model
+on a training set with millions of instances and hundreds of features?
+6. Say you trained an SVM classifier with an RBF kernel. It seems to underfit the
+training set: should you increase or decrease γ (gamma)? What about C?
+
+1. 
