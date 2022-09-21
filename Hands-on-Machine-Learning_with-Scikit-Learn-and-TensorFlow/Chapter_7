@@ -1,0 +1,29 @@
+1. If you have trained five different models on the exact same training data, and
+they all achieve 95% precision, is there any chance that you can combine these
+models to get better results? If so, how? If not, why?
+2. What is the difference between hard and soft voting classifiers?
+3. Is it possible to speed up training of a bagging ensemble by distributing it across
+multiple servers? What about pasting ensembles, boosting ensembles, random
+forests, or stacking ensembles?
+4. What is the benefit of out-of-bag evaluation?
+5. What makes Extra-Trees more random than regular Random Forests? How can
+this extra randomness help? Are Extra-Trees slower or faster than regular Ran‐
+dom Forests?
+6. If your AdaBoost ensemble underfits the training data, what hyperparameters
+should you tweak and how?
+7. If your Gradient Boosting ensemble overfits the training set, should you increase
+or decrease the learning rate?
+
+1. Yes, combine them by using the result of each model to make a final prediction
+  This can be done by soft or hard voting and works best if the models are very different.
+2. For hard voting only the prediction of each model counts, for soft voting the probabilities
+  of each model for each class count, giving confident prediction more weight
+  Soft voding generally produces better results but very model has to be able to to give a probability
+3. It is possible for bagging, pasting and random forest but not for boosting and
+  Models in one layer can be distributed over multiple servers but oly one layer at a time
+4. The model gets evalated with data that it naturally was not trained with so an extra
+  validation set is not needed
+5. The thresholds of the trees a re random as well. Increases bias, decreases varienca. 
+  training is much faster since tweaking the threshold is the most time consuming step
+6. Increasing the number of models trained, increasing learning rate
+7. You should decrease the learning rate
