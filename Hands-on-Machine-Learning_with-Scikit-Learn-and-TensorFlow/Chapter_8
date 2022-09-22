@@ -1,0 +1,40 @@
+1. What are the main motivations for reducing a dataset’s dimensionality? What are
+the main drawbacks?
+2. What is the curse of dimensionality?
+3. Once a dataset’s dimensionality has been reduced, is it possible to reverse the
+operation? If so, how? If not, why?
+4. Can PCA be used to reduce the dimensionality of a highly nonlinear dataset?
+5. Suppose you perform PCA on a 1,000-dimensional dataset, setting the explained
+variance ratio to 95%. How many dimensions will the resulting dataset have?
+6. In what cases would you use vanilla PCA, Incremental PCA, Randomized PCA,
+or Kernel PCA?
+7. How can you evaluate the performance of a dimensionality reduction algorithm
+on your dataset?
+8. Does it make any sense to chain two different dimensionality reduction algo‐
+rithms?
+
+1. Benefits: 
+    -trainings set gets smaller
+    -training and prediction gets faster
+    To visualize data better for example as 2D or 3D even it had originally more features
+   Drawbacks: 
+    -loss of information
+    -extra step that can be comutational expensive
+    -transformed features dont represent a real value anymore
+2. If the dimensionality increases, the amount of trainings instances has to be increased too
+  because otherwise the instances lie to far away from eachother and the model is prone to overfitting
+3. Yes it is possible but the information that got lost during dimensionality reducting
+  is still lost, so the features are slightly different than before
+4. yes but not if there are no useless features
+5. Its not a fixed number, the features that have the most variance will be kept, until the sum
+  of the variance of these features is 95% of the total variance, the residual features are dropped.
+6. 
+  regular: If no condition from below is true
+  Incremental: If the data fits not into memory or it should be online training
+  Randomized: When the dimensionality should be reduced dramatically
+  Kernel: For non-linear datasets
+7. how many dimensions where dropped together with:
+  -Information loss are reconstruction of the original dataset
+  -Model performance with and without dimensionality reduction
+8. Yes, combining a quick and dirty algrorithm like PCA with a slower but thorough algorithm
+  like LLE will result in a similar result than only using LLE but much quicker
