@@ -1,0 +1,13 @@
+1. seq-to-seq: time series; speech, picture or music to text; translation
+   seq-to-vec: classifying audio, musik, videos; probability of an event
+   vec-to-vec: 
+2. 3 dimensions: 
+    1. batch size
+    2. number of time steps
+    3. features at each time step ( 1 for vector to sequence)
+   same for outut except the third dimension is the number of output neurons
+3. every except the last one
+4. sequence to vector or sequence to sequence
+5. exploding or vanishing gradients and short term memory
+    long term memory cells, dropout, batch normalization, convolutional layer
+6. 
